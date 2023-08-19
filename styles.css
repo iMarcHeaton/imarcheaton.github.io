@@ -1,0 +1,106 @@
+/* CSS Document */
+
+/*
+Author  : Luc Heaton
+URL     : lucheaton.com
+Email   : luc@lucheaton.com
+*/
+
+* {
+	box-sizing: border-box;
+}
+html {
+	margin-top: 20px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+a,p,h1,h2,h3,h4,li {
+    font-family: 'Roboto-Slab', serif;
+    color: #d3d3d3;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+body {
+    background-color: #333333;
+    margin: 0;
+}
+header {
+	justify-content: flex-start;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+li {
+	float: left;
+}
+li a {
+	display: block;
+	color: #d3d3d3;
+	text-align: center;
+	padding: 10px;
+}
+li a:hover {
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+}
+.first-item a {
+	padding-right: 32px;
+	text-decoration: none;
+}
+.first-item a:hover {
+	text-decoration: none;
+}
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+  	align-items: center;
+}
+.flex-item {
+	border: 1px solid;
+	margin: 10px;
+	flex: 20%;
+}
+.flex-item img {
+	max-width: 100%;
+	height: auto;
+}
+
+/*More than*/
+@media only screen and (min-width: 1200px) {
+	.flex-item {
+		flex: 20%;
+	}
+}
+/*Less than*/
+@media (max-width: 1200px) {
+	.flex-item {
+		flex: 30%;
+	}
+}
+/*Less than*/
+@media (max-width: 700px) {
+	.flex-item {
+		flex: 40%;
+	}
+	html {
+		margin-left: 16px;
+		margin-right: 16px;
+	}
+}
+/*Less than*/
+@media (max-width: 350px) {
+	.flex-item {
+		flex: 100%;
+	}
+}
