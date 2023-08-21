@@ -11,8 +11,8 @@ Email   : luc@lucheaton.com
 }
 html {
 	margin-top: 20px;
-	margin-left: 10%;
-	margin-right: 10%;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 a,p,h1,h2,h3,h4,li {
     font-family: 'Roboto-Slab', serif;
@@ -58,49 +58,51 @@ li a:hover {
 .first-item a:hover {
 	text-decoration: none;
 }
-.flex-container {
+
+.row {
+	display: -ms-flexbox; /* IE10 */
 	display: flex;
-	flex-direction: row;
+	-ms-flex-wrap: wrap; /* IE10 */
 	flex-wrap: wrap;
-	justify-content: center;
+	padding: 0 4px;
+}
+/* Create four equal columns that sits next to each other */
+.column {
+	-ms-flex: 25%; /* IE10 */
+	flex: 25%;
+	max-width: 25%;
+	padding: 0 4px;
+}
+.column img {
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+}
+.item-title {
+	padding-top: 5px;
 	text-align: center;
-  	align-items: center;
-}
-.flex-item {
-	border: 1px solid;
-	margin: 10px;
-	flex: 20%;
-}
-.flex-item img {
-	max-width: 100%;
-	height: auto;
+	font-weight: 100;
+	font-size: 0.8rem;
+	color: #b3b3b3
 }
 
-/*More than*/
-@media only screen and (min-width: 1200px) {
-	.flex-item {
-		flex: 20%;
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+	.column {
+		-ms-flex: 50%;
+		flex: 50%;
+		max-width: 50%;
 	}
 }
 /*Less than*/
-@media (max-width: 1200px) {
-	.flex-item {
-		flex: 30%;
-	}
-}
-/*Less than*/
-@media (max-width: 700px) {
-	.flex-item {
-		flex: 40%;
-	}
+@media (max-width: 400px) {
 	html {
 		margin-left: 16px;
 		margin-right: 16px;
 	}
-}
-/*Less than*/
-@media (max-width: 350px) {
-	.flex-item {
+	.column {
+		-ms-flex: 100%;
 		flex: 100%;
+		max-width: 100%;
 	}
 }
