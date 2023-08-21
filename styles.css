@@ -14,7 +14,7 @@ html {
 	margin-left: 5%;
 	margin-right: 5%;
 }
-a,p,h1,h2,h3,h4,li {
+a, p, h1, h2, h3, h4, li {
     font-family: 'Roboto-Slab', serif;
     color: #d3d3d3;
     margin: 0;
@@ -66,19 +66,22 @@ li a:hover {
 	flex-wrap: wrap;
 	padding: 0 4px;
 }
-/* Create four equal columns that sits next to each other */
+/* Create four equal columns that sit next to each other */
 .column {
 	-ms-flex: 25%; /* IE10 */
 	flex: 25%;
 	max-width: 25%;
 	padding: 0 4px;
 }
-.column img {
+.image-data img {
 	margin-top: 8px;
 	vertical-align: middle;
 	width: 100%;
 }
-.item-title {
+.image-data img:hover {
+	opacity: 0.9;
+}
+.image-data p {
 	padding-top: 5px;
 	text-align: center;
 	font-weight: 100;
@@ -86,7 +89,62 @@ li a:hover {
 	color: #b3b3b3
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
+#lightbox {
+	position: fixed; /* Overlay */
+	z-index: 1; 	 /* Overlap */
+	padding-top: 50px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .95)
+}
+
+.lightbox-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	/* Center */
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+/* Hide lightbox by default */
+.lightbox-image,
+#lightbox {
+	display: none;
+}
+
+.lightbox-image img {
+	width: 100%;
+	max-height: 75vh;
+}
+
+.details {
+	font-size: 1rem;
+	text-align: center;
+	padding: 2px 16px;
+	color: white;
+}
+
+/* The Close Button */
+.close {
+	color: white;
+	position: absolute;
+	top: 30px;
+	right: 40px;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #999;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/*Less than*/
 @media screen and (max-width: 800px) {
 	.column {
 		-ms-flex: 50%;
@@ -94,12 +152,7 @@ li a:hover {
 		max-width: 50%;
 	}
 }
-/*Less than*/
-@media (max-width: 400px) {
-	html {
-		margin-left: 16px;
-		margin-right: 16px;
-	}
+@media screen and (max-width: 400px) {
 	.column {
 		-ms-flex: 100%;
 		flex: 100%;

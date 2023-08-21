@@ -37,142 +37,144 @@
 		<main>
 			<div class="row">
 				<div class="column">
-					<a href="#">
+					<a class="image-data" href="#" onclick="openLightbox();currentImage(0)">
+						<img src="images/1.jpg" alt="Artwork 1">
+						<p>Artwork 1</p>
+					</a>
+					<a class="image-data" href="#" onclick="openLightbox();currentImage(1)">
+						<img src="images/2.jpg" alt="Artwork 2">
+						<p>Artwork 2</p>
+					</a>
+					<a class="image-data" href="#" onclick="openLightbox();currentImage(2)">
+						<img src="images/3.jpg" alt="Artwork 3">
+						<p>Artwork 3</p>
+					</a>
+					<a class="image-data" href="#" onclick="openLightbox();currentImage(3)">
+						<img src="images/4.jpg" alt="Artwork 4">
+						<p>Artwork 4</p>
+					</a>
+					<a class="image-data" href="#" onclick="openLightbox();currentImage(4)">
+						<img src="images/5.jpg" alt="Artwork 5">
+						<p>Artwork 5</p>
+					</a>
+				</div>
+				<div class="column">
+					<a class="image-data" href="#" onclick="openLightbox();currentImage(4)">
+						<img src="images/5.jpg" alt="Artwork 5">
+						<p>Artwork 1</p>
+					</a>
+					<a class="image-data" href="#" onclick="openLightbox();currentImage(3)">
+						<img src="images/4.jpg" alt="Artwork 4">
+						<p>Artwork 2</p>
+					</a>
+					<a class="image-data" href="#" onclick="openLightbox();currentImage(2)">
+						<img src="images/3.jpg" alt="Artwork 3">
+						<p>Artwork 3</p>
+					</a>
+					<a class="image-data" href="#" onclick="openLightbox();currentImage(1)">
+						<img src="images/2.jpg" alt="Artwork 2">
+						<p>Artwork 4</p>
+					</a>
+					<a class="image-data" href="#" onclick="openLightbox();currentImage(0)">
+						<img src="images/1.jpg" alt="Artwork 1">
+						<p>Artwork 5</p>
+					</a>
+				</div>
+				<div class="column">
+					<a class="image-data" href="#" onclick="openLightbox();currentImage(0)">
+						<img src="images/1.jpg" alt="Artwork 1">
+						<p>Artwork 1</p>
+					</a>
+					<a class="image-data" href="#" onclick="openLightbox();currentImage(1)">
+						<img src="images/2.jpg" alt="Artwork 2">
+						<p>Artwork 2</p>
+					</a>
+					<a class="image-data" href="#" onclick="openLightbox();currentImage(2)">
+						<img src="images/3.jpg" alt="Artwork 3">
+						<p>Artwork 3</p>
+					</a>
+					<a class="image-data" href="#" onclick="openLightbox();currentImage(3)">
+						<img src="images/4.jpg" alt="Artwork 4">
+						<p>Artwork 4</p>
+					</a>
+					<a class="image-data" href="#" onclick="openLightbox();currentImage(4)">
+						<img src="images/5.jpg" alt="Artwork 5">
+						<p>Artwork 5</p>
+					</a>
+				</div>
+				<div class="column">
+					<a class="image-data" href="#" onclick="openLightbox();currentImage(4)">
+						<img src="images/5.jpg" alt="Artwork 5">
+						<p>Artwork 1</p>
+					</a>
+					<a class="image-data" href="#" onclick="openLightbox();currentImage(3)">
+						<img src="images/4.jpg" alt="Artwork 4">
+						<p>Artwork 2</p>
+					</a>
+					<a class="image-data" href="#" onclick="openLightbox();currentImage(2)">
+						<img src="images/3.jpg" alt="Artwork 3">
+						<p>Artwork 3</p>
+					</a>
+					<a class="image-data" href="#" onclick="openLightbox();currentImage(1)">
+						<img src="images/2.jpg" alt="Artwork 2">
+						<p>Artwork 4</p>
+					</a>
+					<a class="image-data" href="#" onclick="openLightbox();currentImage(0)">
+						<img src="images/1.jpg" alt="Artwork 1">
+						<p>Artwork 5</p>
+					</a>
+				</div>
+			</div>
+
+			<div id="lightbox">
+				<span class="close cursor" onclick="closeLightbox()">&times;</span>
+				<div class="lightbox-content">
+
+					<div class="lightbox-image" style="display: none">
 						<img src="images/1.jpg" alt="1">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/cyan.jpg" alt="Cyan">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
+						<div class="details">
+							<p>Artwork 1</p>
+							<p>2020, Pastel on Wood, 100 x 60cm</p>
+						</div>
+					</div>
+
+					<div class="lightbox-image" style="display: none">
 						<img src="images/2.jpg" alt="2">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/lightblue.jpg" alt="Light blue">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
+						<div class="details">
+							<p>Artwork 2</p>
+							<p>2020, Pastel on Wood, 100 x 60cm</p>
+						</div>
+					</div>
+
+					<div class="lightbox-image" style="display: none">
 						<img src="images/3.jpg" alt="3">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/pink.jpg" alt="Pink">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
+						<div class="details">
+							<p>Artwork 3</p>
+							<p>2020, Pastel on Wood, 100 x 60cm</p>
+						</div>
+					</div>
+
+					<div class="lightbox-image" style="display: none">
 						<img src="images/4.jpg" alt="4">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/violet.jpg" alt="Violet">
-						<div class="item-title">Head One</div>
-					</a>
+						<div class="details">
+							<p>Artwork 4</p>
+							<p>2020, Pastel on Wood, 100 x 60cm</p>
+						</div>
+					</div>
+
+					<div class="lightbox-image" style="display: none">
+						<img src="images/5.jpg" alt="4">
+						<div class="details">
+							<p>Artwork 5</p>
+							<p>2020, Pastel on Wood, 100 x 60cm</p>
+						</div>
+					</div>
 				</div>
-				<div class="column">
-					<a href="#">
-						<img src="images/beach.jpg" alt="Beach">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/5.jpg" alt="5">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/gold.jpg" alt="Gold">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/6.jpg" alt="6">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/lime.jpg" alt="Lime">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/7.jpg" alt="7">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/red.jpg" alt="Red">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/1.jpg" alt="1">
-						<div class="item-title">Head One</div>
-					</a>
-				</div>
-				<div class="column">
-					<a href="#">
-						<img src="images/2.jpg" alt="2">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/cyan.jpg" alt="Cyan">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/3.jpg" alt="3">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/lightblue.jpg" alt="Light blue">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/4.jpg" alt="4">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/pink.jpg" alt="Pink">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/5.jpg" alt="5">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/violet.jpg" alt="Violet">
-						<div class="item-title">Head One</div>
-					</a>
-				</div>
-				<div class="column">
-					<a href="#">
-						<img src="images/beach.jpg" alt="Beach">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/6.jpg" alt="6">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/gold.jpg" alt="Gold">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/7.jpg" alt="7">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/lime.jpg" alt="Lime">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/1.jpg" alt="1">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/red.jpg" alt="Red">
-						<div class="item-title">Head One</div>
-					</a>
-					<a href="#">
-						<img src="images/2.jpg" alt="2">
-						<div class="item-title">Head One</div>
-					</a>
-				</div>
-			  </div>
+			</div>
+
 		</main>
     </body>
+	<footer>
+		<script src="lightbox.js"></script>
+	</footer>
 </html>
