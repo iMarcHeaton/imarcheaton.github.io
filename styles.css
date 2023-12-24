@@ -11,8 +11,8 @@ Email   : luc@lucheaton.com
 }
 html {
 	margin-top: 20px;
-	margin-left: 5%;
-	margin-right: 5%;
+	margin-left: 20%;
+	margin-right: 20%;
 }
 a, p, h1, h2, h3, h4, li {
     font-family: 'Roboto-Slab', serif;
@@ -21,16 +21,29 @@ a, p, h1, h2, h3, h4, li {
     padding: 0;
 }
 a {
-    text-decoration: none;
-}
-body {
-    background-color: #333333;
-    margin: 0;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px;
 }
 header {
 	justify-content: flex-start;
     font-size: 1.5rem;
     font-weight: 200;
+}
+body {
+    background-color: #333333;
+    margin: 0;
+}
+footer {
+    width: 100%;
+    position: relative;
+    margin-top: 20%;
+}
+main {
+	margin-top: 60px;
+	margin-bottom: 20px;
+}
+section {
+	margin-top: 20px;
 }
 ul {
 	list-style-type: none;
@@ -45,18 +58,18 @@ li a {
 	display: block;
 	color: #d3d3d3;
 	text-align: center;
-	padding: 10px;
+	padding-right: 20px;
 }
 li a:hover {
-	text-decoration: underline;
-	text-decoration-thickness: 1px;
+	text-decoration: underline !important;
 }
 .first-item a {
 	padding-right: 32px;
+	padding-bottom: 10px;
 	text-decoration: none;
 }
 .first-item a:hover {
-	text-decoration: none;
+	text-decoration: none !important;
 }
 
 .row {
@@ -72,6 +85,10 @@ li a:hover {
 	flex: 25%;
 	max-width: 25%;
 	padding: 0 4px;
+	justify-content: center
+}
+.image-data {
+	display: block; /*Inline anchors..*/
 }
 .image-data img {
 	margin-top: 8px;
@@ -80,18 +97,119 @@ li a:hover {
 }
 .image-data img:hover {
 	opacity: 0.9;
+	cursor: pointer;
 }
 .image-data p {
 	padding-top: 5px;
 	text-align: center;
 	font-weight: 100;
-	font-size: 0.8rem;
+	font-size: 1rem;
 	color: #b3b3b3
 }
+/* Hidden image attribute */
+.image-detail {
+	display: none;
+}
+
+
+.featured-container img {
+	max-width: 40%; 
+	display: block;
+}
+.featured-title {
+	padding-top: 10px;
+	font-size: 1.5rem;
+}
+.featured-detail {
+	font-size: 1.2rem;
+}
+
+.biography-container p {
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.biography-container a {
+	font-size: 1.5rem;
+}
+.biography-container a:hover {
+	text-decoration: none;
+}
+.section-nav span {
+	font-weight: bold;
+	font-size: 2rem;
+}
+.social-bar {
+	text-align: center;
+	font-size: 1.75rem;
+	padding: 20px;
+}
+.creator {
+	text-align: center;
+	text-decoration: none;
+	margin-bottom: 20px;
+}
+.contact-container {
+	padding-bottom: 20px;
+}
+.contact-container a{
+	font-size: 1.25rem;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	table-layout: fixed;
+}
+
+table caption {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: .5em 0 .75em;
+	text-align: left;
+	color: #d3d3d3;
+}
+
+table tr {
+	border-bottom: 1px solid #d3d3d3;
+	padding: .35em;
+}
+
+.row-head {
+	font-weight: bold;
+	text-align: center;
+	width: 10%;
+}
+
+table td {
+	padding: 0.55em;
+	text-align: left;
+	color: #d3d3d3;
+}
+
+@media screen and (max-width: 600px) {
+	table caption {
+		font-size: 1.3em;
+	}
+	.row-head {
+		width: 100%;
+	}
+	table td,
+	table tr {
+		display: block;
+		text-align: left;
+		width: 100%;
+	}
+	table tr {
+		margin-bottom: 0.5em;
+	}
+}
+
 
 #lightbox {
-	position: fixed; /* Overlay */
-	z-index: 1; 	 /* Overlap */
+	position: fixed;
+	z-index: 1;
 	padding-top: 50px;
 	left: 0;
 	top: 0;
@@ -109,25 +227,26 @@ li a:hover {
 	transform: translate(-50%, -50%);
 }
 
-/* Hide lightbox by default */
-.lightbox-image,
-#lightbox {
-	display: none;
-}
-
-.lightbox-image img {
-	width: 100%;
-	max-height: 75vh;
-}
-
-.details {
+.lightbox-detail-container {
 	font-size: 1rem;
 	text-align: center;
 	padding: 2px 16px;
 	color: white;
 }
 
-/* The Close Button */
+/* Hide lightbox by default */
+#lightbox {
+	display: none;
+}
+#lightbox-title {
+	font-weight: bold;
+}
+
+.lightbox-data img {
+	width: 100%;
+	max-height: 75vh;
+}
+
 .close {
 	color: white;
 	position: absolute;
@@ -145,11 +264,35 @@ li a:hover {
 }
 
 /*Less than*/
+@media screen and (max-width: 1700px) {
+	html {
+		margin-left: 5vw;
+		margin-right: 5vw;
+	}
+}
 @media screen and (max-width: 800px) {
 	.column {
 		-ms-flex: 50%;
 		flex: 50%;
 		max-width: 50%;
+	}
+}
+/*Smallest size before wrapping*/
+@media screen and (max-width: 550px) {
+	li {
+		float: none;
+	}
+	.first-item a {
+		padding-right: 0;
+	}
+	li a {
+		padding-right: 0;
+	}
+	.featured-container img{
+		max-width: 100%;
+	}
+	.contact-container {
+		text-align: center;
 	}
 }
 @media screen and (max-width: 400px) {

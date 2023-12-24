@@ -7,10 +7,32 @@ Email   : luc@lucheaton.com
 */
 
 var imageIndex = 0;
+
+var lightboxImage;
+var lightboxTitle;
+var lightboxDetail;
+
+var imageData;
+var images;
+var imageTitles;
+var imageDetails;
+
+loadData();
 showImage(imageIndex);
 
+function loadData() {
+	lightboxImage = document.getElementById("lightbox-image");
+	lightboxTitle = document.getElementById("lightbox-title");
+	lightboxDetail = document.getElementById("lightbox-detail");
+
+	imageData = document.getElementsByClassName("image-data");
+	images = document.getElementsByClassName("image");
+	imageTitles = document.getElementsByClassName("image-title");
+	imageDetails = document.getElementsByClassName("image-detail");
+}
+
 function currentImage(_index) {
-	imageIndex = _index
+	imageIndex = _index;
 	showImage();
 }
 
@@ -23,11 +45,10 @@ function closeLightbox() {
 }
 
 function showImage() {
-	var images = document.getElementsByClassName("lightbox-image");
-	if (imageIndex > images.length) {imageIndex = 0}
-	if (imageIndex < 0) {imageIndex = images.length}
-	for (var i = 0; i < images.length; i++) {
-		images[i].style.display = "none";
-	}
-	images[imageIndex].style.display = "block";
+	if (imageIndex > images.length) {imageIndex = 0;}
+	if (imageIndex < 0) {imageIndex = imageData.length;}
+
+	lightboxImage.src = images[imageIndex].src;
+	lightboxTitle.innerHTML = imageTitles[imageIndex].innerHTML;
+	lightboxDetail.innerHTML = imageDetails[imageIndex].innerHTML;
 }
