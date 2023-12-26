@@ -295,7 +295,7 @@ table td {
 		text-align: center;
 	}
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 300px) {
 	.column {
 		-ms-flex: 100%;
 		flex: 100%;
