@@ -22,12 +22,10 @@ showImage(imageIndex);
 
 function loadData() {
 	lightboxImage = document.getElementById("lightbox-image");
-	lightboxTitle = document.getElementById("lightbox-title");
 	lightboxDetail = document.getElementById("lightbox-detail");
 
 	imageData = document.getElementsByClassName("image-data");
 	images = document.getElementsByClassName("image");
-	imageTitles = document.getElementsByClassName("image-title");
 	imageDetails = document.getElementsByClassName("image-detail");
 }
 
@@ -49,6 +47,5 @@ function showImage() {
 	if (imageIndex < 0) {imageIndex = imageData.length;}
 
 	lightboxImage.src = images[imageIndex].src;
-	lightboxTitle.innerHTML = imageTitles[imageIndex].innerHTML;
 	lightboxDetail.innerHTML = imageDetails[imageIndex].innerHTML;
 }
