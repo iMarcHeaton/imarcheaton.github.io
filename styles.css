@@ -11,8 +11,8 @@ Email   : luc@lucheaton.com
 }
 html {
 	margin-top: 20px;
-	margin-left: 20%;
-	margin-right: 20%;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 a, p, h1, h2, h3, h4, li {
     font-family: 'Roboto-Slab', serif;
@@ -71,22 +71,6 @@ li a:hover {
 .first-item a:hover {
 	text-decoration: none !important;
 }
-
-.row {
-	display: -ms-flexbox; /* IE10 */
-	display: flex;
-	-ms-flex-wrap: wrap; /* IE10 */
-	flex-wrap: wrap;
-	padding: 0 4px;
-}
-/* Create four equal columns that sit next to each other */
-.column {
-	-ms-flex: 25%; /* IE10 */
-	flex: 25%;
-	max-width: 25%;
-	padding: 0 4px;
-	justify-content: center
-}
 .image-data {
 	display: block; /*Inline anchors..*/
 }
@@ -95,10 +79,6 @@ li a:hover {
 	vertical-align: middle;
 	width: 100%;
 }
-.image-data img:hover {
-	opacity: 0.9;
-	cursor: pointer;
-}
 .image-data p {
 	padding-top: 5px;
 	text-align: center;
@@ -106,14 +86,10 @@ li a:hover {
 	font-size: 1rem;
 	color: #b3b3b3
 }
-/* Hidden image attribute */
-.image-detail {
-	display: none;
-}
-
 
 .featured-container img {
-	max-width: 80%; 
+	width: auto;
+	max-height: 650px; 
 	display: block;
 }
 .featured-title {
@@ -188,6 +164,61 @@ table td {
 	color: #d3d3d3;
 }
 
+.year {
+	margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	grid-gap: 10px;
+	list-style: none;
+
+}
+
+.year > * {
+	flex-grow: calc(var(--width) * (100000 / var(--height)));
+	flex-basis: calc(300px * (var(--width) / var(--height)));
+	aspect-ratio: var(--width) / var(--height);
+	position: relative;
+	overflow: hidden;
+	margin: 0 !important;
+	padding: 0 !important;
+	
+	max-width: 300px;
+	max-height: 400px;
+}
+
+.year > * > img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.year-container h1 {
+	line-height: 2em;
+	color: #d3d3d3;
+	text-shadow: 1px 1px 1px #000;
+	font-size: 1.5em;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+.year-container h1:before, .year-container h1:after {
+	content: " ";
+	position: absolute;
+	top: 50%;
+	margin-left: -999em;
+	height: 2px;
+	width: 998em;
+	border-top: 1px solid #d3d3d3;
+}
+.year-container h1:after {
+	left: auto;
+	width: 999em;
+	margin: 0 0 0 1em;
+}
+
+
 @media screen and (max-width: 600px) {
 	table caption {
 		font-size: 1.3em;
@@ -204,63 +235,6 @@ table td {
 	table tr {
 		margin-bottom: 0.5em;
 	}
-}
-
-
-#lightbox {
-	position: fixed;
-	z-index: 1;
-	padding-top: 50px;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, .95)
-}
-
-.lightbox-content {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	/* Center */
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-}
-
-.lightbox-detail-container {
-	font-size: 1rem;
-	text-align: center;
-	padding: 2px 16px;
-	color: white;
-}
-
-/* Hide lightbox by default */
-#lightbox {
-	display: none;
-}
-#lightbox-title {
-	font-weight: bold;
-}
-
-.lightbox-data img {
-	width: 100%;
-	max-height: 75vh;
-}
-
-.close {
-	color: white;
-	position: absolute;
-	top: 30px;
-	right: 40px;
-	font-size: 35px;
-	font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-	color: #999;
-	text-decoration: none;
-	cursor: pointer;
 }
 
 /*Less than*/
@@ -295,10 +269,17 @@ table td {
 		text-align: center;
 	}
 }
+
 @media screen and (max-width: 300px) {
 	.column {
 		-ms-flex: 100%;
 		flex: 100%;
 		max-width: 100%;
+	}
+}
+
+@media screen and (max-width: 150px) { 
+	.year-container h1:before, .year-container h1:after {
+		display: none;
 	}
 }
